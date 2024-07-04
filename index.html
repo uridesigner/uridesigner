@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+
+    <title>Laura Mayor - Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=1">
+    <style>
+        #app:empty {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(#ffffff, #fcfaff);
+            position: relative;
+        }
+
+        #app:empty:before {
+            content: 'Loading...';
+            display: block;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABQpJREFUWEftl2tQlGUUx//LLix3WIFdXJTLAlGICRhJk0kjaV7yMlMojHnBQC7RRM4UYqASyJjCUMaSFiCNKINhZIPAxIiXRkExJm4BFQPIVVx3YXdZbrts8zzGJgEuq071gfPp3X0u5/f833POc16GWq1W4z80xhzA/0oB5ZgSLH3WvxoRmhggsdhU0Qy+y3yolCqcTcjDz6XVGhgPPw/4Bb4CQ1ND2NjbgOfIeyqgFICcfLB/EO317VApx2G90Bq2TjxssQzE6PAYdZQvPkvnKGRDMOOY0jmztf6+AVRdrJo03dnbGYIlTqAAcokcQ7IhKJUqtP7SCpVKhWd8XBGxKAojihG6MOdONpSjSrTVtcF7tRfYxuzZ+kd2TA7OH/2OzifrIoThcPESwGkCgAwQiM6mTgxKFRgdGgVnPgf7V8ZpAPLFebjbdhdELSaLCTtXPozMjLRCEMV22e+m6hEzsTTBOUmeZt2kOiDplUAmlmNkcBjDihEcWHuIwhD77FYqJb5RWAF9tj58Ny4DQ4+hFeD7tAsoPlGCrt+6tQOQGXcaO8BQAwbGBohwfxcjfwEkX0oCU58J1ZgKphxTOHsJtDonwRziEoaAfW9CGPGldoDO5i7IxDIoR8ew2G8xAiy2QiEdogsPl31CT842NoStgEeVmcef90iIq3nX8O2RAnx8PhYhrmHaAZoqmsBz4qH7924q986FwRqA9JrjkPSIYWRmDJ4jFzWXayHwFMBhkf30EGog+sW92BD1BtyXuyPEZY92AJJyjdd/xYBISkHiVsVrAJLLk2igLn3dm0by5dwrqLtaj/cz35sWoPZKHVK2pSK7NRP3OkSzAyCRSpz3/NEDmUQGYXgGBeA6crEnLRQWXHMMSuQgRamisBLHQ9Nxqi0THFvOFIiEDYlwf/k5BOx7Cz0tvbMDILuIu8U0AxquNeCrD76mAEvXeGNz9EaAwQCTycQS/+dRfvoyUnekITBuC7Ynvj0JoKOxA3t9P6RwJGB1AiAqkFogE0nxadAxmj4k+hNLEqAcG4OVnTWsF1jhVlEVBTC3NseptiwYmvxdmIgy5DWFfR5KwXQCePgoB9cl0PvAf+dKesq+9j4Ks/DZBai8cJMCEIsUhmN95Dr6LOntp3ILa4/DVmD7ZADbeNth52aH1po2RJ2MBN+FD7aRAQ1QUi+iX9hLHfBd+TjZmAE9ph5Ox59BZ3MnYs/FaM7y2AqQOuDp70mr38GiA+DwLMG1t4EF14JuHuMXi/prDfQ5rnA/vFZ5IdjxHRwqiofbMrenA+Czzgfyfjl2Je+Ag4cDfQUTVvnDTSRuOkx/LlrujhVBK0CKz7GfjkwKSp0VIFWOxWZhKyeInoRIHpKye8rlMz6uRrh7JLqau6hDMyszWhde2uz7ZACiDhHAAE2ltWFrkHvwDAoG8qe9/UpOlCI9ImNKLDxMoLMCpCSzDFi4XVpN73GFVIEC6fQApF8g733gnhSRGeFYH/EgGx4bQNQpgqjrPuT3ZSgSFqOq+DbdayYAMkYUuphRgpz2rGkbFZ0UIL1hS3UL7QsSNyVpruNHAUju9uPHrDK4eDvDa5UnTccJOx2fi5ryOjTeaKR/kWaGlPLVwa/h1W1+D1qyf0o2cG8A2R/l4NI35ZgYDv8ijF7HM9m4ahxl2WVIuX50UqaQvSaamofXks7I2Nx4egDSSEy0UDN6nGGAlGZdbO7TbE6BPwFJQ9y/Yoc6kQAAAABJRU5ErkJggg==">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAixJREFUOE+t01tI01EcwPHvmJKQgmtghk0xwUi72ENCZRBUbxoETUJMjKBarEX0ovgQ4a0rKF5Lc41Kmzp0S0Wx0KSLPlgPGusqXpq3YnNtNdfSxf8vLUYOH+z3dg6Hz/n9zu93JF6v18sqQvJfAOfcd4KCpDw3vMBhdRCfHM+GuEhkkbIVc5N43B7vzOgMs2NfGOodQl/UhG68DpfThWKL4h9g4u1n7uboiE5QcFiThliCbcqG5cMkPfW9dN7qQjtaK66379+GNEjqh1RrbvOorI3s4iyUOUeXAPcPNxPmCfqNAzTk6ynuKSRsXRgbN0cRvCbYB9hm5mi60oyxxOQPCG8wPjxGv2kAw/UWip7kE50QzWDnKw5mH/ABDwv07DmyG9VWtT+w8GsByzsLDQV6hvvecEF7nvUxEejy7pFVeFzMRMjy/qV60nOVHJNn+APCFfPOeTpruzBcayHPkIssMpyai3cIjwhHXX2W9soOEvclIo+SLw8ISPNVA93ax6gqzhCXtIm2yg4ai5uoG6lFSF9VfhqH1bk8sLi4KAIfBz+hqVETKgvF/vUbJ2JOErsjlszLGew8lBQYsM/a6Wt8hrHURNVwue/1K1RVmF+aKXtdikQiCQxMj0yL/W0tMdE6b/ABlvcWsRtp51JFoOfBU25k3iRFmYKq7NTSHAj1e356aK/owDplIzl1l3j4T1gnraSk7xX3XA4XQrlChKwN+QusOPQBDqz6N/4GDv4sZfWnikEAAAAASUVORK5CYII=">
+
+    <meta name="description" content="¡Hola! Bienvenido a mi portfolio. Me llamo Laura, y soy una diseñadora UX/UI junior. Me gustan los desafíos y la creación de productos digitales que faciliten la vida de los usuarios. Si necesitas algo, no dudes en contactar conmigo.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Laura Mayor - Portfolio">
+    <meta property="og:description" content="¡Hola! Bienvenido a mi portfolio. Me llamo Laura, y soy una diseñadora UX/UI junior. Me gustan los desafíos y la creación de productos digitales que faciliten la vida de los usuarios. Si necesitas algo, no dudes en contactar conmigo.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Laura Mayor - Portfolio">
+    <meta name="twitter:description" content="¡Hola! Bienvenido a mi portfolio. Me llamo Laura, y soy una diseñadora UX/UI junior. Me gustan los desafíos y la creación de productos digitales que faciliten la vida de los usuarios. Si necesitas algo, no dudes en contactar conmigo.">
+  <script type="module" crossorigin src="/assets/index.js"></script>
+  <link rel="stylesheet" href="/assets/index.css">
+</head>
+<body>
+<div id="app">
+</div>
+
+</body>
+</html>
